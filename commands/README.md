@@ -7,3 +7,4 @@ Iniciar o projeto Django
 - pip install django #Instala o django
 - django-admin startproject project . #Cria o Projeto
 - python manage.py startapp contact  #Cria o APP Contato
+
