@@ -15,14 +15,16 @@ class ContactForm(forms.ModelForm):
         help_text= 'Help Text '
     )
     
+    def __init__(self,*args, **kwargs):
+        super().__init__(*args, **kwargs)
+    
     class Meta:
         
-        def __init__(self,*args, **kwargs):
-            super().__init__(*args, **kwargs)
         
         model = models.Contact
         fields = (
             'first_name', 'last_name', 'phone',
+            'email', 'description', 'category',
         )
         
     def clean(self):

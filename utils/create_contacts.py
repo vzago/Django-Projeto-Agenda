@@ -25,7 +25,7 @@ if __name__ == '__main__':
     Category.objects.all().delete()
     
     fake = faker.Faker('pt_BR')
-    categories = ['Amingos', 'Familia', 'Conhecidos']
+    categories = ['Amigos', 'Familia', 'Conhecidos']
     
     django_categories = [Category(name = name) for name in categories]
     
