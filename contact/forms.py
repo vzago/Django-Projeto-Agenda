@@ -3,7 +3,26 @@ from django.core.exceptions import ValidationError
 from . import models
 
 class ContactForm(forms.ModelForm):
+    
+    first_name = forms.CharField(
+        widget=forms.TextInput(
+            attrs= {
+                'class': 'classe-a classe-b',
+                'placeholder' : 'Aqui vai o primeiro nome'
+            }
+        ),
+        label='Primeiro Nome',
+        help_text= 'Help Text '
+    )
+
+    
+    
+    
     class Meta:
+        
+        def __init__(self,*args, **kwargs):
+            super().__init__(*args, **kwargs)
+        
         model = models.Contact
         fields = (
             'first_name', 'last_name', 'phone',
